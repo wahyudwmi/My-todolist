@@ -110,8 +110,8 @@
                                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                  <button type="submit" class="btn btn-danger deleteData" data-dismiss="modal" data-id="a">Delete</button>
+                                                  <a class="btn btn-primary" data-dismiss="modal" href="#">Close</a>
+                                                  <a class="btn btn-danger deleteData" href="">Delete</a>
                                                   <button type="submit" class="btn btn-primary">Update</button>
                                                   </form>
                                         </div>

@@ -84,15 +84,13 @@ class Todolist extends CI_Controller
                     }
           }
 
-          public function delete()
+          public function delete($id)
           {
-                    $this->db->where('id', $this->input->post('id'));
+                    $this->db->where('id', $id);
                     $this->db->delete('kegiatan');
-                    $data['status'] = 'success';
-                    $this->output->set_content_type('application/json');
-                    $this->output->set_output(json_encode($data));
-                    $string = $this->output->get_output();
-                    echo $string;
-                    exit();
+
+                    $this->session->set_flashdata('messege', '<div class="alert alert-success mx-4 alert-dismissible fade show" role="alert">Kegiatan berhasil dihapus! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span></button></div>');
+                    redirect('todolist');
           }
 }
