@@ -24,10 +24,16 @@
                               </div>
                     </div>
 
+                    <?php if ($this->session->flashdata('messege')) : ?>
+                              <div class="row">
+                                        <div class="col-lg-10 mx-auto">
+                                                  <?= $this->session->flashdata('messege'); ?>
+                                        </div>
+                              </div>
+                    <?php endif; ?>
                     <?php if ($kegiatan) : ?>
                               <div class="row">
                                         <div class="col-lg-12">
-                                                  <?= $this->session->flashdata('messege'); ?>
                                                   <div class="card mt-1 mx-auto bg-dark border-secondary" style="max-width: 30rem;">
                                                             <div class="card-header border-bottom border-warning text-light">Kegiatan Hari ini</div>
                                                             <div class=" card-body">

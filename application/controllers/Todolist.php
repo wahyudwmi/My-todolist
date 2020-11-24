@@ -89,8 +89,9 @@ class Todolist extends CI_Controller
                     $this->db->where('id', $id);
                     $this->db->delete('kegiatan');
 
-                    $this->session->set_flashdata('messege', '<div class="alert alert-success mx-4 alert-dismissible fade show" role="alert">Kegiatan berhasil dihapus! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    $this->session->set_flashdata('messege', '<div class="alert alert-warning mx-4 alert-dismissible fade show" role="alert">Kegiatan berhasil dihapus! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">&times;</span></button></div>');
+
                     redirect('todolist');
           }
 }
