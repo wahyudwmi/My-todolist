@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="modal-footer">
                                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                  <button type="submit" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                                                  <button type="submit" class="btn btn-danger deleteData" data-dismiss="modal" data-id="a">Delete</button>
                                                   <button type="submit" class="btn btn-primary">Update</button>
                                                   </form>
                                         </div>

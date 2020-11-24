@@ -83,4 +83,16 @@ class Todolist extends CI_Controller
                               redirect('todolist');
                     }
           }
+
+          public function delete()
+          {
+                    $this->db->where('id', $this->input->post('id'));
+                    $this->db->delete('kegiatan');
+                    $data['status'] = 'success';
+                    $this->output->set_content_type('application/json');
+                    $this->output->set_output(json_encode($data));
+                    $string = $this->output->get_output();
+                    echo $string;
+                    exit();
+          }
 }
